@@ -1,0 +1,45 @@
+class GalaAlan{
+	public static void main(String[] args){
+		Sprawdzian spr = new Sprawdzian();
+		
+		System.out.println("------------Zad 1 ------------------");
+		System.out.println("");
+		System.out.println("Data: "+spr.data);
+		System.out.println("Ocena: "+spr.ocena);
+		System.out.println("Przedmiot: "+spr.przedmiot);
+		System.out.println("");
+		System.out.println("------------Konstruktor w pliku Dane---------------------");
+		System.out.println("");
+		Dane dn = new Dane("Alan", "Gala", "24.03.2004");
+		System.out.println(""+dn.toString());
+
+	}
+}
+============================
+============================
+============================
+class Dane{
+	private String imie = "";
+	private String nazwisko = "";
+	private String data_urodzenia = "";
+	
+	public Dane(String imie, String nazwisko, String data_urodzenia){
+		this.imie = imie;
+		this.nazwisko = nazwisko;
+		this.data_urodzenia = data_urodzenia;
+	}
+	
+	@Override
+	public String toString(){
+		return imie +" "+nazwisko+" urodzony: "+data_urodzenia;
+	}
+}
+===========================
+===========================
+===========================
+
+class Sprawdzian{
+	public String data = "07.04.2021";
+	public int ocena = 5;
+	public String przedmiot = "Programowanie obiektowe";
+}
